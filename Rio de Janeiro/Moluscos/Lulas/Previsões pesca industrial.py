@@ -21,8 +21,8 @@ aspi_std = np.sqrt( np.sum((anos_sem_pesca_ind - aspi_media)**2)/5  )
 aspi_normalizado = (anos_sem_pesca_ind - aspi_media)/aspi_std
 
 #Pegando o modelo e seus pesos salvos
-model = keras.models.load_model('/home/andre/Área de Trabalho/Projeto da pesca/modelo_projeto_pesca.keras') 
-model.load_weights('/home/andre/Área de Trabalho/Projeto da pesca/Lulas/pesos pesca ind/.weights.h5')
+model = keras.models.load_model('/home/andre/Área de Trabalho/Reconstrução da Estatística Pesqueira BR/modelo_projeto_pesca.keras') 
+model.load_weights('/home/andre/Área de Trabalho/Reconstrução da Estatística Pesqueira BR/Lulas/pesos pesca ind/.weights.h5')
 
 #Previsões
 prev_geral = model.predict(ano_normalizado)*pi_std + pi_media
